@@ -1,0 +1,18 @@
+[Unit]
+Description=Kibana
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+User=kibana
+Group=kibana
+EnvironmentFile=-/etc/default/kibana
+ExecStart=/usr/bin/node /usr/share/kibana/bin/kibana.js
+SuccessExitStatus=143
+Restart=always
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2 @@
+build/dist/kibana/src/* usr/share/kibana
+build/dist/kibana/config/kibana.yml etc/kibana

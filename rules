@@ -1,0 +1,36 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	npm install grunt
+	npm install bower
+	npm install
+	./node_modules/bower/bin/bower install
+	./node_modules/grunt-cli/bin/grunt test build --force
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf node_modules
+	rm -rf build
+	rm -rf target
+	rm -rf src/kibana/bower_components
+	rm -rf .node_binaries
+	rm -f src/kibana/components/agg_table/agg_table.css
+	rm -f src/kibana/components/collapsible_sidebar/collapsible_sidebar.css
+	rm -f src/kibana/components/doc_table/doc_table.css
+	rm -f src/kibana/components/doc_viewer/doc_viewer.css
+	rm -f src/kibana/components/filter_bar/filter_bar.css
+	rm -f src/kibana/components/typeahead/typeahead.css
+	rm -f src/kibana/components/vislib/styles/main.css
+	rm -f src/kibana/components/visualize/visualize.css
+	rm -f src/kibana/plugins/dashboard/styles/main.css
+	rm -f src/kibana/plugins/discover/styles/main.css
+	rm -f src/kibana/plugins/markdown_vis/markdown_vis.css
+	rm -f src/kibana/plugins/metric_vis/metric_vis.css
+	rm -f src/kibana/plugins/settings/styles/main.css
+	rm -f src/kibana/plugins/table_vis/table_vis.css
+	rm -f src/kibana/plugins/visualize/styles/main.css
+	rm -f src/kibana/styles/main.css
+	rm -f npm-debug.log

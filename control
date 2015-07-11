@@ -1,0 +1,13 @@
+Source: kibana
+Section: utils
+Priority: optional
+Maintainer: Mike Palmer <mike@mikepalmer.net>
+Build-Depends: debhelper (>= 7.3.13), nodejs
+Standards-Version: 3.9.6
+
+Package: kibana
+Architecture: all
+Depends: ${misc:Depends}, nodejs
+Description: Kibana browser based analytics and search dashboard
+ Kibana is an open source (Apache Licensed), browser based analytics and search 
+ dashboard for Elasticsearch.

@@ -1,0 +1,5 @@
+kibana (4.1.1-1) stable; urgency=medium
+
+  * Initial package
+
+ -- Mike Palmer <mike@mikepalmer.net>  Thu, 09 Jul 2015 14:38:29 -0700
