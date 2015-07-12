@@ -16,7 +16,7 @@ License: Apache License, Version 2.0
  under the License.
 
 Files: debian/*
-Copyright: 2015 Mike Palmer <mike.palmer@traxtech.com>
+Copyright: 2015 Mike Palmer <mike@mikepalmer.net>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
